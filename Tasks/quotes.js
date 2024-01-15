@@ -8,13 +8,8 @@ const quotes = function (inputStr) {
   let isOpenQuote = false;
   for (const currentChar of inputStr) {
     if (currentChar === '"') {
-      if (!isOpenQuote) {
-        result.push('«');
-        isOpenQuote = true;
-      } else {
-        result.push('»');
-        isOpenQuote = false;
-      }
+      result.push(isOpenQuote ? '»' : '«');
+      isOpenQuote = !isOpenQuote;
     } else {
       result.push(currentChar);
     }
