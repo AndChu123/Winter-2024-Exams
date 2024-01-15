@@ -16,12 +16,12 @@ month = [
   'dec',
 ];
 
-const monthNumber = (s) => {
-  const l = months.length;
-  for (let i = 0; i < l; i++) {
-    if (s.toLowerCase().startsWith(months[i])) return i + 1;
+const monthNumber = (input) => {
+  const lowerInput = input.toLowerCase();
+  const index = months.findIndex((month) => lowerInput.startsWith(month));
+  if (input.toLowerCase().startsWith(months[index])) {
+    return index + 1;
   }
   return -1;
 };
-
 module.exports = monthNumber;
