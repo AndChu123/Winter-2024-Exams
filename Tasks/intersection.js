@@ -4,8 +4,7 @@
 const intersection = function(object1, object2) {
   for (const keys of Object.keys(object1)) {
     if (
-      object2.hasOwnProperty(keys) &&
-      object1[keys] === object2[keys]
+      object2.hasOwnProperty(keys) && object1[keys] === object2[keys]
     ) {
       continue;
     } else {
