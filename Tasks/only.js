@@ -2,7 +2,7 @@
 'use strict';
 
 const onlyListedValues = (values, ...listedValues) => {
-  const keys = Object.keys(values);
+  const keys = Object.keys(values, 'a', 'b', 'c');
 
   for (const key of keys) {
     if (!listedValues.includes(key)) {
